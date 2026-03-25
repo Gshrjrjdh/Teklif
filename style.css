@@ -1,0 +1,30 @@
+body {
+    display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;
+    font-family: 'Georgia', serif; background-color: #f8f0f4; color: #333; text-align: center; overflow: hidden; position: relative;
+}
+#specialEffectsCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; pointer-events: none; display: none; }
+#proposalWrapper { display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh; position: relative; z-index: 10; }
+#proposalContainer { position: relative; padding: 50px; border-radius: 15px; background: white; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); transition: opacity 0.5s; overflow: hidden; }
+#questionText { font-size: 3.5em; margin-bottom: 40px; color: #e91e63; font-weight: normal; position: relative; z-index: 2; }
+.button-group { position: relative; z-index: 2; display: flex; justify-content: center; }
+.proposal-button {
+    padding: 18px 35px; margin: 15px; border: none; border-radius: 50px; cursor: pointer;
+    font-size: 1.5em; font-weight: bold; position: relative;
+    transition: transform 0.3s, background-color 0.2s, font-size 0.2s, padding 0.2s, left 0.3s, top 0.3s;
+}
+#yesButton { background-color: #4CAF50; color: white; box-shadow: 0 4px 10px rgba(76, 175, 80, 0.5); }
+#noButton { background-color: #f44336; color: white; }
+/* Kalp Animasyonu CSS */
+#dynamicIntroVisual { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 1; }
+.heart-animation { position: absolute; bottom: -50px; left: var(--left-position); width: 30px; height: 30px; background-color: #ff69b4; transform: rotate(-45deg); opacity: 0; animation: floatHeart 10s infinite ease-in-out; }
+.heart-animation::before, .heart-animation::after { content: ''; position: absolute; width: 30px; height: 30px; background-color: #ff69b4; border-radius: 50%; }
+.heart-animation::before { top: -15px; left: 0; }
+.heart-animation::after { left: 15px; top: 0; }
+.heart-animation.delay-1 { animation-delay: 3s; }
+.heart-animation.delay-2 { animation-delay: 6s; }
+@keyframes floatHeart {
+    0% { transform: translateY(0) rotate(-45deg) scale(0.5); opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(-45deg) scale(1.2); opacity: 0; }
+}
