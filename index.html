@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sevgi | Cennet </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.js"></script>
+</head>
+<body>
+
+    <canvas id="specialEffectsCanvas"></canvas> 
+
+    <div id="proposalWrapper">
+        <div id="proposalContainer">
+            <h1 id="questionText">Cennet<br>Benimle evlenir misin?</h1> 
+            
+            <div class="button-group">
+                <button id="yesButton" class="proposal-button">EVET</button>
+                <button id="noButton" class="proposal-button">HAYIR</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mediaContainer" style="display: none;">
+        <video id="proposalVideo1" src="130452.mp4" playsinline width="100%" height="auto"></video>
+        
+        <video id="proposalVideo2" src="ikinci-video.mp4" playsinline width="100%" height="auto" style="display: none;"></video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
